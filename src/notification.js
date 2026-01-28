@@ -1,6 +1,7 @@
 import notifier from 'node-notifier';
 import Logger from './logger.js';
 import { isPaidNotificationMethod } from './license.js';
+import { applyProjectTemplate } from './utils/project.js';
 
 class NotificationService {
   constructor(config) {
@@ -11,6 +12,10 @@ class NotificationService {
   async send(title, message) {
     if (!title) throw new Error('Notification title is required');
     if (!message) throw new Error('Notification message is required');
+
+    // Apply project template substitution to both title and message
+    const processedTitle = applyProjectTemplate(title);
+    const processedMessage = applyProjectTemplate(message);
 
     if (!this.config.notificationsEnabled) {
       return;
@@ -27,11 +32,11 @@ class NotificationService {
     }
 
     if (method === 'email' || method === 'telegram' || method === 'whatsapp' || method === 'slack') {
-      this.sendMessageNotification(title, message);
+      this.sendMessageNotification(processedTitle, processedMessage);
     } else if (method === 'webhook') {
-      this.sendCustomWebhookNotification(title, message);
+      this.sendCustomWebhookNotification(processedTitle, processedMessage);
     } else {
-      this.sendDesktopNotification(title, message);
+      this.sendDesktopNotification(processedTitle, processedMessage);
     }
   }
 

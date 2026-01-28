@@ -6,8 +6,8 @@ import NotificationService from '../notification.js';
 function createNotificationMessages(agentName) {
   const capitalizedName = agentName.charAt(0).toUpperCase() + agentName.slice(1);
   return {
-    title: `Hey, ${capitalizedName} is waiting for you!`,
-    message: `${capitalizedName} stopped`,
+    title: `Hey, ${capitalizedName} in {project} is waiting for you!`,
+    message: `{project}: ${capitalizedName} stopped`,
   };
 }
 
