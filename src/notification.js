@@ -75,13 +75,13 @@ class NotificationService {
     this.logger.info(`${notificationMethod} notification sent`);
   }
 
-  async sendCustomWebhookNotification(title, message) {
+  async sendCustomWebhookNotification(title, message, richContext = null) {
     const webhookUrl = this.config.data.webhookUrl;
     if (!webhookUrl) {
       throw new Error('Webhook URL not configured');
     }
 
-    const payload = {
+    const payload = richContext || {
       title: title,
       message: message,
       timestamp: new Date().toISOString(),
@@ -123,6 +123,24 @@ class NotificationService {
         this.logger.info(`Desktop notification response: ${response}`);
       }
     });
+  }
+
+  async sendRich(title, message) {
+    await this.send(title, message);
+  }
+
+  async sendWebhookContext(context) {
+    if (!this.config.notificationsEnabled) {
+      return;
+    }
+
+    const method = this.config.notificationMethod || 'desktop';
+
+    if (method === 'webhook') {
+      await this.sendCustomWebhookNotification(context.title, context.message, context);
+    } else {
+      await this.send(context.title, context.message);
+    }
   }
 }
 
