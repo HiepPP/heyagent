@@ -9,6 +9,7 @@ class Config {
     this.defaults = {
       notificationMethod: 'desktop',
       notificationsEnabled: true,
+      presenceDetectionEnabled: true,
       email: null,
       phoneNumber: null,
       telegramChatId: null,
@@ -99,6 +100,10 @@ class Config {
 
   get notificationsEnabled() {
     return this.get('notificationsEnabled');
+  }
+
+  get presenceDetectionEnabled() {
+    return this.get('presenceDetectionEnabled');
   }
 
   clearLicenseKey() {

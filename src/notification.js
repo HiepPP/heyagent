@@ -2,6 +2,7 @@ import notifier from 'node-notifier';
 import Logger from './logger.js';
 import { isPaidNotificationMethod } from './license.js';
 import { applyProjectTemplate } from './utils/project.js';
+import { getPresenceDetector } from './utils/presence.js';
 
 class NotificationService {
   constructor(config) {
@@ -19,6 +20,15 @@ class NotificationService {
 
     if (!this.config.notificationsEnabled) {
       return;
+    }
+
+    // Check if user is present (actively typing) - suppress notification
+    if (this.config.presenceDetectionEnabled) {
+      const presence = getPresenceDetector();
+      if (presence.isPresent()) {
+        this.logger.info(`User is present (idle ${presence.getIdleTime()}ms), suppressing notification`);
+        return;
+      }
     }
 
     const method = this.config.notificationMethod || 'desktop';

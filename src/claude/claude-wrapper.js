@@ -4,6 +4,7 @@ import process from 'process';
 import Logger from '../logger.js';
 import HookSetup from './hook-setup.js';
 import SlashCommandSetup from './slash-command-setup.js';
+import { getPresenceDetector } from '../utils/presence.js';
 
 export default class ClaudeWrapper {
   constructor(config) {
@@ -55,6 +56,8 @@ export default class ClaudeWrapper {
     process.stdin.resume();
     process.stdin.on('data', data => {
       this.claude.write(data);
+      // Record user presence activity
+      getPresenceDetector().recordActivity();
     });
 
     this.claude.onExit(() => {

@@ -6,6 +6,7 @@ HeyAgent supports most of the CLI coding agents, use it for free!
 
 ## Features
 
+- **Smart presence detection** - Notifications suppressed while you're actively typing (no more interruptions during flow)
 - **Context-aware notifications** - Know WHY your agent stopped with error details, file paths, and actionable suggestions
 - **Project-aware** - Notifications show your project name for easy identification
 - **Multi-channel support** - Desktop, Email, Slack, Telegram, WhatsApp, and custom webhooks
@@ -80,6 +81,23 @@ Configure your preferred method with `hey config`.
 
 \*Pro notification channels require a license. Run `hey license` to set up.
 
+### Configuration
+
+HeyAgent stores configuration in `~/.heyagent/config.json`:
+
+```json
+{
+  "notificationMethod": "desktop",
+  "notificationsEnabled": true,
+  "presenceDetectionEnabled": true
+}
+```
+
+To disable presence detection:
+```bash
+hey config  # Set presenceDetectionEnabled to false
+```
+
 ### Slash Commands (within Claude Code only)
 
 While Claude is running, you can use:
@@ -97,6 +115,7 @@ HeyAgent wraps your CLI coding agent sessions and provides intelligent notificat
 
 HeyAgent uses Claude Code's hooks and slash commands for event-driven notifications:
 
+- **Presence detection** - Suppresses notifications while you're typing (30s threshold)
 - **Stop events** - Notifies when Claude finishes responding
 - **Permission prompts** - Alerts when Claude needs approval for tool use
 - **Idle detection** - Notifies when Claude is waiting for input after 60+ seconds

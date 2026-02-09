@@ -3,6 +3,7 @@ import process from 'process';
 import Logger from '../logger.js';
 import NotificationService from '../notification.js';
 import { NOTIFY_TITLE_CODEX, NOTIFY_MSG_CODEX_STOPPED } from '../constants.js';
+import { getPresenceDetector } from '../utils/presence.js';
 
 // Minimal Codex wrapper: spawn `codex`, mirror I/O, and notify after inactivity.
 export default class CodexWrapper {
@@ -76,6 +77,8 @@ export default class CodexWrapper {
     process.stdin.resume();
     process.stdin.on('data', data => {
       this.codex.write(data);
+      // Record user presence activity
+      getPresenceDetector().recordActivity();
       // Consider Enter as submission, reset state to working.
       if (data[0] === 0x0d || data[0] === 0x0a) {
         this.logger.info('Submit detected, resetting state to working');

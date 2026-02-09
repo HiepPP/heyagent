@@ -2,6 +2,7 @@ import pty from '@lydell/node-pty';
 import process from 'process';
 import Logger from '../logger.js';
 import NotificationService from '../notification.js';
+import { getPresenceDetector } from '../utils/presence.js';
 
 function createNotificationMessages(agentName) {
   const capitalizedName = agentName.charAt(0).toUpperCase() + agentName.slice(1);
@@ -84,6 +85,8 @@ export default class AgentWrapper {
     process.stdin.resume();
     process.stdin.on('data', data => {
       this.agent.write(data);
+      // Record user presence activity
+      getPresenceDetector().recordActivity();
       // Consider Enter as submission, reset state to working.
       if (data[0] === 0x0d || data[0] === 0x0a) {
         this.logger.info('Submit detected, resetting state to working');
