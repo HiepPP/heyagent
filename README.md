@@ -94,6 +94,7 @@ HeyAgent stores configuration in `~/.heyagent/config.json`:
 ```
 
 To disable presence detection:
+
 ```bash
 hey config  # Set presenceDetectionEnabled to false
 ```
