@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2FD477D23059B24DE1D497E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1C70F7CF65AB4B5880790 /* AppDelegate.swift */; };
+		30F17FF87A345795786ACE78 /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9137479F23704D2FA2BA38DD /* LiveActivityManager.swift */; };
+		4E8AA4542696DB3956F856F6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200297735F1B295F6AF64A90 /* main.swift */; };
+		67D0EBB95CD3AF7C3E896F40 /* NotificationAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473AA3DE49A71C25C53E33BC /* NotificationAttributes.swift */; };
+		CB8FD2B743972EDE665029FC /* NotificationServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A645C8B5715F5BB7A096E1 /* NotificationServer.swift */; };
+		DC91F99F2FC4A22622735146 /* NotificationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11F6CE9F117D4ED9A0504B1 /* NotificationParser.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		200297735F1B295F6AF64A90 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		32A645C8B5715F5BB7A096E1 /* NotificationServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationServer.swift; sourceTree = "<group>"; };
+		473AA3DE49A71C25C53E33BC /* NotificationAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAttributes.swift; sourceTree = "<group>"; };
+		7424EAF22E5D974A1CE040CD /* TopNotch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopNotch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		908AA27B55409FA9A7166BAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9137479F23704D2FA2BA38DD /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
+		CAE1C70F7CF65AB4B5880790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D11F6CE9F117D4ED9A0504B1 /* NotificationParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationParser.swift; sourceTree = "<group>"; };
+		E453D31D89B9B641B4D34002 /* TopNotch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TopNotch.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		45339A2291A01E6B43D0EFFF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9137479F23704D2FA2BA38DD /* LiveActivityManager.swift */,
+				D11F6CE9F117D4ED9A0504B1 /* NotificationParser.swift */,
+				32A645C8B5715F5BB7A096E1 /* NotificationServer.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		62F3FD4CB959E560D6C34DB8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CAE1C70F7CF65AB4B5880790 /* AppDelegate.swift */,
+				908AA27B55409FA9A7166BAD /* Info.plist */,
+				200297735F1B295F6AF64A90 /* main.swift */,
+				E453D31D89B9B641B4D34002 /* TopNotch.entitlements */,
+				45339A2291A01E6B43D0EFFF /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		818ECAEC59F22B34628D6F7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7424EAF22E5D974A1CE040CD /* TopNotch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2DA527BA3416221B5631A7D /* TopNotchShared */ = {
+			isa = PBXGroup;
+			children = (
+				473AA3DE49A71C25C53E33BC /* NotificationAttributes.swift */,
+			);
+			path = TopNotchShared;
+			sourceTree = "<group>";
+		};
+		DB8FD2A71A02D69AA07D5F24 = {
+			isa = PBXGroup;
+			children = (
+				62F3FD4CB959E560D6C34DB8 /* Sources */,
+				B2DA527BA3416221B5631A7D /* TopNotchShared */,
+				818ECAEC59F22B34628D6F7C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFD95A726D5E36E192DA4F1C /* TopNotch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88BD232CD17BA7319CCA505F /* Build configuration list for PBXNativeTarget "TopNotch" */;
+			buildPhases = (
+				9F8D214A158197ADB21959E2 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TopNotch;
+			packageProductDependencies = (
+			);
+			productName = TopNotch;
+			productReference = 7424EAF22E5D974A1CE040CD /* TopNotch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F074CB1A4EE59E06CD5D0044 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AFD95A726D5E36E192DA4F1C = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = B0BC2CB7ADFA145BD9F804B6 /* Build configuration list for PBXProject "TopNotch" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = DB8FD2A71A02D69AA07D5F24;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 818ECAEC59F22B34628D6F7C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFD95A726D5E36E192DA4F1C /* TopNotch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F8D214A158197ADB21959E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FD477D23059B24DE1D497E4 /* AppDelegate.swift in Sources */,
+				30F17FF87A345795786ACE78 /* LiveActivityManager.swift in Sources */,
+				67D0EBB95CD3AF7C3E896F40 /* NotificationAttributes.swift in Sources */,
+				DC91F99F2FC4A22622735146 /* NotificationParser.swift in Sources */,
+				CB8FD2B743972EDE665029FC /* NotificationServer.swift in Sources */,
+				4E8AA4542696DB3956F856F6 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		20824B7F6960EB70B19DAE82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		4C4C50B1CA4525CC0D097525 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/TopNotch.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.heyagent.topnotch;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		53D58FB719837FCD334E93CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		6379C14C1EC9F84E3A377009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/TopNotch.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.heyagent.topnotch;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88BD232CD17BA7319CCA505F /* Build configuration list for PBXNativeTarget "TopNotch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C4C50B1CA4525CC0D097525 /* Debug */,
+				6379C14C1EC9F84E3A377009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B0BC2CB7ADFA145BD9F804B6 /* Build configuration list for PBXProject "TopNotch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53D58FB719837FCD334E93CD /* Debug */,
+				20824B7F6960EB70B19DAE82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F074CB1A4EE59E06CD5D0044 /* Project object */;
+}
