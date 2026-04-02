@@ -54,3 +54,4 @@ build/
 # Temporary files
 tmp/
 temp/
+.gitnexus
